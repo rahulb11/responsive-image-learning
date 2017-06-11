@@ -8,19 +8,22 @@
 
 module.exports = function(grunt) {
 
+  //var mozjpeg = require('imagemin-mozjpeg');
+  const gm = require('gm').subClass({imageMagick: true});
   grunt.initConfig({
     responsive_images: {
       dev: {
         options: {
-          engine: 'im',
           sizes: [{
-            /*
-            Change these:
-            
-            width: ,
-            suffix: ,
-            quality:
-            */
+            name:'small',
+            width: '30%',
+            //suffix: '_small',
+            quality:20
+          },{
+            name:'large',
+            width: '50%',
+            //suffix: '_large',
+            quality:40
           }]
         },
 
@@ -62,13 +65,29 @@ module.exports = function(grunt) {
           dest: 'images/'
         }]
       },
-    },
+    }/*,
+
+    imagemin: {                          // Task
+      static: {                          // Target
+        options: {                       // Target options
+          optimizationLevel: 7,
+          svgoPlugins: [{ removeViewBox: false }],
+          use: [mozjpeg()]
+        },
+        files: {                         // Dictionary of files
+          'css/cockatoos.jpg': 'images_src/cockatoos.jpg', // 'destination': 'source'
+          'css/grasshopper.jpg': 'images_src/grasshopper.jpg',
+          'css/horses.jpg': 'images_src/horses.jpg'
+        }
+      }
+    }*/
   });
-  
+
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
+  //grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
 
 };

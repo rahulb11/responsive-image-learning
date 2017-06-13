@@ -8,12 +8,12 @@
   <meta itemprop="name" content="Udacity Responsive Images course project">
   <meta name="mobile-web-app-capable" content="yes">
   <meta id="theme-color" name="theme-color" content="#307699">
+  <meta charset="utf-8">
 
   <!-- loads the Udacity Feedback extension -->
   <meta name="udacity-grader" content="http://udacity.github.io/responsive-images/project/project-grader.json" unit-tests="http://udacity.github.io/responsive-images/project/project-grader.js">
 
   <base target="_blank">
-
   <title>My responsive blog: picture story</title>
 
   <link rel="stylesheet" href="css/main.css" />
@@ -22,7 +22,20 @@
 
 <body>
 
-  <h1>My responsive blog</h1>
+    <header>
+        <svg>
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="90" cy="55" rx="85" ry="55" fill="url(#grad1)" />
+          <text fill="#ffffff" font-size="45" font-family="Verdana" x="40" y="70">Blog</text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      <h1>My responsive blog</h1>
+  </header>
 
   <article>
     <figure>
@@ -31,7 +44,7 @@
     </figure>
     <h2>My story</h2>
 
-    <p>I love cheese, especially manchego swiss. <img class="smiley" src="images_src/fixed/smiley_face.png"> Fromage queso jarlsberg cheesy feet emmental cottage cheese camembert de normandie bocconcini. Cottage cheese everyone loves cauliflower cheese rubber cheese squirty cheese halloumi cow fondue. Bocconcini cheese and biscuits everyone loves fondue red leicester st. agur blue cheese rubber cheese ricotta. Cheesy grin mozzarella.</p>
+    <p>I love cheese, especially manchego swiss. ☺ Fromage queso jarlsberg cheesy feet emmental cottage cheese camembert de normandie bocconcini. Cottage cheese everyone loves cauliflower cheese rubber cheese squirty cheese halloumi cow fondue. Bocconcini cheese and biscuits everyone loves fondue red leicester st. agur blue cheese rubber cheese ricotta. Cheesy grin mozzarella.</p>
 
     <figure>
         <img src="images/horses-large.jpg">
@@ -92,13 +105,15 @@
 
   </article>
 
-  <img style="max-width: 100%" src="images_src/fixed/flourish.png">
-  <!--
-  Flourish credit: http://pixabay.com/en/flourish-line-border-decoration-31609/
-  -->
-
   <br>
   <a href="//github.com/udacity/responsive-images/tree/master/project/start" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+  <footer>
+    <a href="#"><span class="zocial-twitter"></span></a>
+    <a href="#"><span class="zocial-facebook"></span></a>
+    <a href="#"><span class="zocial-googleplus"></span></a>
+    <a href="#"><span class="zocial-digg"></span></a>
+  </footer>
 
 </body>
 </html>

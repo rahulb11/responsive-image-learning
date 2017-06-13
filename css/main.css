@@ -11,23 +11,51 @@ Hint! You'll probably want to start by styling:
 I've left some boilerplate below for you.
 
 */
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  font-size: 150%;
+}
 
 body {
     width: 50em;
 }
 
 article {
-
+    border-bottom: solid;
+    border-bottom-style: outset;
 }
 
 h1 {
-
+    position: relative;
+    font-size: 300%;
+    padding-top: 20px;
 }
 
-img:not(.smiley) {
+img{
     width: 100%;
 }
 
 figcaption{
     text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+
+span{
+    padding: 10px;
+}
+
+footer a{
+    color: black;
+}
+
+svg{
+    float: left;
+    height: 125px;
+    width: 200px;
 }
